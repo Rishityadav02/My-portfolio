@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap"
+   rel="stylesheet">
+  <link href="all.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Rishit's Portfolio</title>
+</head>
+<body>
+  
+  <div class="container">
+    
+    <div class="menu">
+      <div class="buttons-flex">
+      <div class="button red"></div>
+      <div class="button yellow"></div>
+      <div class="button green"></div>
+    </div>
+    <div class="title">
+      <p><h1><i class='fab fa-globe'></i> Rishit Yadav's Portfolio</h1></p>
+    </div>
+    </div>
+    <div id="app">
+    </div>
+  </div>
+
+  <div class="d-flex flex-column justify-content-center w-100 h-100">
+
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <div class="btn-group my-5">
+        <a href="https://codepen-api-export-production.s3.us-west-2.amazonaws.com/zip/PEN/pyBNzX/1578778289271/pure-css-gradient-background-animation.zip" class="btn btn-outline-light" aria-current="page"></a>
+        <a href="https://codepen.io/P1N2O/full/pyBNzX" class="btn btn-outline-light"></a>
+      </div>
+      <a href="https://manuel.pinto.dev" class="text-decoration-none">
+      </a>
+    </div>
+  </div>
+  </div>
+  <header class="header">Yes, this is my Portfolio, not so much active to make an interactive one.</header>
+  <footer class="footer">&#9400 Made by Rishit Yadav</footer>
+
+  <body onLoad="initClock()">
+
+    <div id="timedate">
+      <a id="mon">January</a>
+      <a id="d">1</a>,
+      <a id="y">0</a><br />
+      <a id="h">12</a> :
+      <a id="m">00</a>:
+      <a id="s">00</a>:
+      <a id="mi">000</a>
+      <style>
+        body {background-color:#2d2d2d;}
+
+        #timedate {
+          font: small-caps lighter 15px/100% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+          text-align:left;
+          width: 95%;
+          margin: 20px auto;
+          color:#fff;
+          border-left: 3px solid #000000;
+          padding: 5px;
+          position: fixed;  
+          left: 89%;  
+          top: 5px;  
+          right: 10px;   
+          width: 95%;
+          cursor: context-menu;
+        }
+      </style>
+
+      <script>
+        Number.prototype.pad = function(n) {
+          for (var r = this.toString(); r.length < n; r = 0 + r);
+          return r;
+        };
+        
+        function updateClock() {
+          var now = new Date();
+          var milli = now.getMilliseconds(),
+            sec = now.getSeconds(),
+            min = now.getMinutes(),
+            hou = now.getHours(),
+            mo = now.getMonth(),
+            dy = now.getDate(),
+            yr = now.getFullYear();
+          var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          var tags = ["mon", "d", "y", "h", "m", "s", "mi"],
+            corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2), milli];
+          for (var i = 0; i < tags.length; i++)
+            document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+        }
+        
+        function initClock() {
+          updateClock();
+          window.setInterval("updateClock()", 1);
+        }
+      </script>
+
+    </div>
+
+  <script src="main.js"></script>  
+</body>
+
+</html>
