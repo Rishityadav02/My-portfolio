@@ -110,11 +110,11 @@ async function getInputValue(){
   }
   else if(value === "contact"){
     trueValue(value);
-    createCode("CALL", "<i class='fab fa-wrench '></i> Click to call me at <a href='callto:+918090151012' target='_blank'> +91-8090151012.</a>")
+    createCode("CALL", "<i class='fab fa-wrench '></i> Click to call me at <a href='tel:+918090151012' target='_blank'> +91-8090151012.</a>")
     createCode("MAIL", "<i class='fab fa-wrench '></i> Click to Mail at <a href='mailto:rishityadav2002@gmail.com' target='_blank'> rishityadav2002@gmail.com.</a>")
-    createCode("Instagram", "<i class='fab fa-wrench '></i> To see my *special* content, follow my <a href='https://www.instagram.com/rishit_yadav_/?igshid=MzRlODBiNWFlZA%3D%3D' target='_blank'> INSTAGRAM</a> I'd.")
-    createCode("Facebook", "<i class='fab fa-wrench '></i> Send me a friend request on <a href='https://www.facebook.com/yaduvanshi.rishit?mibextid=ZbWKwL' target='_blank'> FACEBOOK</a> I'd.")
-    createCode("LinkedIn", "<i class='fab fa-wrench '></i> Connect to me on my <a href='https://www.linkedin.com/in/rishit-yadav-a68027202' target='_blank'> LinkedIn</a> I'd.")
+    createCode("Instagram", "<i class='fab fa-wrench '></i> <a href='https://www.instagram.com/rishit_yadav_/?igshid=MzRlODBiNWFlZA%3D%3D' target='_blank'>To see my *special* content, follow my INSTAGRAM</a> I'd.")
+    createCode("Facebook", "<i class='fab fa-wrench '></i> <a href='https://www.facebook.com/yaduvanshi.rishit?mibextid=ZbWKwL' target='_blank'>Send me a friend request on FACEBOOK</a> I'd.")
+    createCode("LinkedIn", "<i class='fab fa-wrench '></i> <a href='https://www.linkedin.com/in/rishit-yadav-a68027202' target='_blank'> Connect to me on my LinkedIn</a> I'd.")
     createText("---------------------------------------------------------------")
   
   }
