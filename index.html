@@ -10,9 +10,91 @@
   <title>Rishit's Portfolio</title>
 </head>
 <body>
-  
+  <header class="header">Yes, this is my Portfolio, <br>not so much active to make an <br>interactive one.</header>
+
+
+
+
+
+  <body onLoad="initClock()">
+
+    <div id="timedate">
+      <a id="mon">January</a>
+      <a id="d">1</a>,
+      <a id="y">0</a><br />
+      <a id="h">12</a> :
+      <a id="m">00</a>:
+      <a id="s">00</a>:
+      <a id="mi">000</a>
+      <style>
+        body {background-color:#2d2d2d;}
+
+        #timedate {
+          font: small-caps lighter 15px/100% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+          text-align:left;
+          width: 50%;
+          margin-right: 5%;
+          margin-top: 2%;
+          color:#fff;
+          border-left: 3px solid #000000;
+          padding: 5px;
+          position: fixed;
+          top: 5px;
+          left: 200vh;
+          cursor: context-menu;
+        }
+      </style>
+
+      <script>
+        Number.prototype.pad = function(n) {
+          for (var r = this.toString(); r.length < n; r = 0 + r);
+          return r;
+        };
+
+        function updateClock() {
+          var now = new Date();
+          var milli = now.getMilliseconds(),
+            sec = now.getSeconds(),
+            min = now.getMinutes(),
+            hou = now.getHours(),
+            mo = now.getMonth(),
+            dy = now.getDate(),
+            yr = now.getFullYear();
+          var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          var tags = ["mon", "d", "y", "h", "m", "s", "mi"],
+            corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2), milli];
+          for (var i = 0; i < tags.length; i++)
+            document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+        }
+
+        function initClock() {
+          updateClock();
+          window.setInterval("updateClock()", 1);
+        }
+      </script>
+
+    </div>
+
+  <script src="main.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="container">
-    
+
     <div class="menu">
       <div class="buttons-flex">
       <div class="button red"></div>
@@ -39,69 +121,9 @@
     </div>
   </div>
   </div>
-  <header class="header">Yes, this is my Portfolio, not so much active to make an interactive one.</header>
   <footer class="footer">&#9400 Made by Rishit Yadav</footer>
 
-  <body onLoad="initClock()">
 
-    <div id="timedate">
-      <a id="mon">January</a>
-      <a id="d">1</a>,
-      <a id="y">0</a><br />
-      <a id="h">12</a> :
-      <a id="m">00</a>:
-      <a id="s">00</a>:
-      <a id="mi">000</a>
-      <style>
-        body {background-color:#2d2d2d;}
-
-        #timedate {
-          font: small-caps lighter 15px/100% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-          text-align:left;
-          width: 95%;
-          margin: 20px auto;
-          color:#fff;
-          border-left: 3px solid #000000;
-          padding: 5px;
-          position: fixed;  
-          left: 200vh;  
-          top: 5px;   
-          width: 95%;
-          cursor: context-menu;
-        }
-      </style>
-
-      <script>
-        Number.prototype.pad = function(n) {
-          for (var r = this.toString(); r.length < n; r = 0 + r);
-          return r;
-        };
-        
-        function updateClock() {
-          var now = new Date();
-          var milli = now.getMilliseconds(),
-            sec = now.getSeconds(),
-            min = now.getMinutes(),
-            hou = now.getHours(),
-            mo = now.getMonth(),
-            dy = now.getDate(),
-            yr = now.getFullYear();
-          var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-          var tags = ["mon", "d", "y", "h", "m", "s", "mi"],
-            corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2), milli];
-          for (var i = 0; i < tags.length; i++)
-            document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
-        }
-        
-        function initClock() {
-          updateClock();
-          window.setInterval("updateClock()", 1);
-        }
-      </script>
-
-    </div>
-
-  <script src="main.js"></script>  
 </body>
 
 </html>
