@@ -69,6 +69,8 @@ function removeInput(){
 }
 
 async function getInputValue(){
+    var lowercase = text.toLowerCase();
+
   
   const value = document.querySelector("input").value;
   if(value === "all"){
