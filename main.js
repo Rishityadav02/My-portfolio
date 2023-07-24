@@ -1,6 +1,11 @@
 
 const app = document.querySelector("#app");
 const delay = ms => new Promise(res => setTimeout(res, ms));
+$(function() {
+            $('input').keyup(function() {
+                this.value = this.value.toLocaleUpperCase();
+            });
+        });
     
     
 app.addEventListener("keypress", async function(event){
@@ -69,7 +74,6 @@ function removeInput(){
 }
 
 async function getInputValue(){
-    var lowercase = text.toLowerCase();
 
   
   const value = document.querySelector("input").value;
